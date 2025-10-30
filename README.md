@@ -1,4 +1,4 @@
-# Elysia DI
+# elysia-di
 
 A Dependency Injection plugin for [Elysia](https://elysiajs.com/) with full TypeScript support.
 
