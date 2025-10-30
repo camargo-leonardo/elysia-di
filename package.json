@@ -1,0 +1,52 @@
+{
+  "name": "elysia-di",
+  "version": "1.0.0",
+  "description": "Dependency Injection plugin for Elysia",
+  "license": "MIT",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "keywords": [
+    "elysia",
+    "dependency-injection",
+    "di",
+    "ioc",
+    "container"
+  ],
+  "scripts": {
+    "dev": "bun run --watch example/index.ts",
+    "test": "bun test",
+    "build": "bun build.ts",
+    "release": "npm run build && npm run test && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camargo-leonardo/elysia-di"
+  },
+  "author": {
+    "name": "Leonardo Camargo",
+    "email": "leonardo.camargo.contato@gmail.com"
+  },
+  "peerDependencies": {
+    "elysia": ">= 1.1.0"
+  },
+  "devDependencies": {
+    "elysia": ">= 1.1.0-rc.2",
+    "@types/bun": "^1.2.14",
+    "eslint": "^8.57.0",
+    "eslint-kit": "^10.33.0",
+    "tsup": "^8.1.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.41"
+  }
+}
