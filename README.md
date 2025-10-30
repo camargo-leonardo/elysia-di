@@ -54,8 +54,7 @@ const app = new Elysia()
       ],
     })
   )
-  .get("/users", ({ services }) => {
-    const userService = services.userService;
+  .get("/users", ({ userService }) => {
     return userService.getUsers();
   })
   .listen(3000);
